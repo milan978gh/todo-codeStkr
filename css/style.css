@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  color: #222;
+}
+
+.wrapper {
+  background: #222;
+  background: -webkit-gradient(linear, left top, right top, from(#222), color-stop(50%, #666), to(#222));
+  background: linear-gradient(90deg, #222 0%, #666 50%, #222 100%);
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.wrapper .header {
+  color: #fff;
+  text-shadow: 1px 1px 3px red;
+  padding: 30px;
+}
+
+.wrapper .add-task {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+.wrapper .add-task input {
+  font-size: 2rem;
+  border: none;
+  border-bottom: 1px solid #888;
+  outline: none;
+}
+
+.wrapper .add-task .add-task-btn {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
