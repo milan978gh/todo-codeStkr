@@ -100,18 +100,6 @@ h2 {
   border-bottom: 1px solid #7474743b;
 }
 
-.wrapper li:hover .custom-checkbox {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: #747474;
-}
-
-.wrapper li:active .custom-checkbox {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  color: #ff652f;
-}
-
 .wrapper li input {
   position: absolute;
   opacity: 0;
@@ -122,54 +110,19 @@ h2 {
   width: 100%;
   cursor: pointer;
   opacity: 1;
-  -webkit-transition: opacity 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out;
-  -webkit-transition: color 150ms ease-in-out;
-  transition: color 150ms ease-in-out;
 }
 
-.wrapper li label:hover {
-  color: #747474;
-}
-
-.wrapper [type="checkbox"]:checked + label .custom-checkbox {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  color: #ff652f;
-  opacity: 0.6;
-}
-
-.wrapper [type="checkbox"]:checked + label .check-mark,
-.wrapper [type="checkbox"]:checked + label {
-  opacity: 0.6;
-}
-
-.wrapper .check-mark {
-  position: absolute;
-  bottom: 5px;
-  left: 2px;
-  opacity: 0;
-  -webkit-transition: opacity 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out;
-  z-index: 1;
-}
-
-.wrapper .custom-checkbox {
-  display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  margin-right: 0.5em;
+.wrapper li label .check-btn {
+  background: transparent;
+  color: #ff0000;
+  border: none;
   cursor: pointer;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 0.5rem;
 }
 
-.test-css__autocomplete {
-  color: blue;
+.wrapper li label .checked {
+  text-decoration: line-through;
 }

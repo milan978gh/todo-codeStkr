@@ -3,6 +3,7 @@ const addTaskBtn = document.querySelector('.add-task-btn');
 const removeCompleteBtn = document.querySelector('.remove-complete-btn');
 const taskList = document.querySelector('.task-list');
 const taskTemplate = document.getElementById('task-template');
+const checkBtn = document.querySelector('.check-btn');
 let id = 1;
 
 
