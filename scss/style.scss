@@ -39,8 +39,8 @@ h2 {
 			outline: none;
 		}
 		.add-task-btn {
-      background: transparent;
-      color: #008c00;
+			background: transparent;
+			color: #008c00;
 			border: none;
 			cursor: pointer;
 			outline: none;
@@ -55,6 +55,7 @@ h2 {
 		padding: 20px 10px 10px;
 		display: flex;
 		justify-content: space-between;
+		align-items: baseline;
 
 		.remove-complete-btn {
 			background: transparent;
@@ -75,7 +76,7 @@ h2 {
 		}
 	}
 	li {
-		text-align: left;
+		text-align: start;
 		font-size: 1.2rem;
 		cursor: pointer;
 		padding: 10px 0;
@@ -95,6 +96,7 @@ h2 {
 		}
 		label {
 			position: relative;
+			width: 100%;
 			cursor: pointer;
 			opacity: 1;
 			transition: opacity 150ms ease-in-out;
