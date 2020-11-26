@@ -13,6 +13,7 @@ body {
   background: #222;
   background: linear-gradient(90deg, #222 0%, #666 50%, #222 100%);
   width: 90%;
+  max-width: 600px;
   margin: 0px auto;
   text-align: center;
 
@@ -32,8 +33,35 @@ body {
       outline: none;
     }
     .add-task-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
       font-size: 2rem;
+      font-weight: bold;
+      margin-left: 1rem;
       padding: 0 0.5rem;
     }
+  }
+  .task-list-header {
+    color: #fff;
+    text-shadow: 1px 1px 3px red;
+    padding: 20px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .remove-complete-btn {
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      text-shadow: 1px 1px 3px red;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  .task-list-wrapper{
+    background-color: #fff;
+    padding: 20px 10px;
   }
 }
