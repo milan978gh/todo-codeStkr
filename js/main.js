@@ -7,7 +7,7 @@ let id = 1;
 
 
 newTask.addEventListener('keyup', (e) => {
-  if (e.key === 13 && inputValid()) {
+  if (e.keyCode === 13 && inputValid()) {
     addTask();
   }
 });
@@ -19,7 +19,13 @@ addTaskBtn.addEventListener('click', () => {
 });
 
 removeCompleteBtn.addEventListener('click', () => {
-
+  const tasks = document.querySelectorAll('.task');
+  tasks.forEach(task => {
+    const checked = task.querySelector('input').checked;
+    if (checked) {
+      task.remove();
+    }
+  });
 });
 
 function addTask() {

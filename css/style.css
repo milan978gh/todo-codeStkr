@@ -10,6 +10,11 @@
 body {
   background: #222;
   color: #222;
+  font-family: Tahoma, sans-serif;
+}
+
+h1, h2 {
+  font-family: Georgia, serif;
 }
 
 .wrapper {
@@ -76,4 +81,88 @@ body {
 .wrapper .task-list-wrapper {
   background-color: #fff;
   padding: 20px 10px;
+}
+
+.wrapper .task-list-wrapper .task-list {
+  padding: 15px 25px 25px 25px;
+}
+
+.wrapper .task-list-wrapper .task-list li {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #7474743b;
+}
+
+.wrapper .task-list-wrapper .task-list li:hover .custom-checkbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #747474;
+}
+
+.wrapper .task-list-wrapper .task-list li:active .custom-checkbox {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #ff652f;
+}
+
+.wrapper .task-list-wrapper .task-list li input {
+  position: absolute;
+  opacity: 0;
+}
+
+.wrapper .task-list-wrapper .task-list li label {
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.wrapper .task-list-wrapper .task-list li label:hover {
+  color: #747474;
+}
+
+.wrapper .task-list-wrapper .task-list [type="checkbox"]:checked + label .custom-checkbox {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #ff652f;
+  opacity: 0.6;
+}
+
+.wrapper .task-list-wrapper .task-list [type="checkbox"]:checked + label .check-mark,
+.wrapper .task-list-wrapper .task-list [type="checkbox"]:checked + label {
+  opacity: 0.6;
+}
+
+.wrapper .task-list-wrapper .task-list .check-mark {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  z-index: 1;
+}
+
+.wrapper .task-list-wrapper .task-list .custom-checkbox {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.5em;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.test-css__autocomplete {
+  color: blue;
 }
