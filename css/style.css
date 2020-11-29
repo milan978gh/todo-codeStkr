@@ -105,6 +105,50 @@ h2 {
   opacity: 0;
 }
 
+.wrapper li input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+.wrapper li input:-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+.wrapper li input::-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+.wrapper li input::placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+.wrapper li input:focus {
+  border-bottom-width: 2px;
+}
+
+.wrapper li input:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.wrapper li input:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.wrapper li input:focus::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.wrapper li input:focus::placeholder {
+  opacity: 0.5;
+}
+
 .wrapper li label {
   position: relative;
   width: 100%;
@@ -112,7 +156,61 @@ h2 {
   opacity: 1;
 }
 
-.wrapper li label .check-btn {
+.task-list li:hover .custom-checkbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #747474;
+}
+
+.task-list li:active .custom-checkbox {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #ff652f;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #ff652f;
+  opacity: 0.6;
+}
+
+[type="checkbox"]:checked + label .check-mark,
+[type="checkbox"]:checked + label {
+  opacity: 0.6;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.5em;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.check-mark {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  z-index: 1;
+}
+
+.test-css__autocomplete {
+  color: blue;
+}
+
+.check-btn {
   background: transparent;
   color: #ff0000;
   border: none;
@@ -123,6 +221,6 @@ h2 {
   padding: 0 0.5rem;
 }
 
-.wrapper li label .checked {
+.checked {
   text-decoration: line-through;
 }

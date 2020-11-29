@@ -85,26 +85,80 @@ h2 {
 		input {
 			position: absolute;
 			opacity: 0;
+
+			&::placeholder {
+				opacity: 1;
+				transition: opacity 150ms ease-in-out;
+			}
+			&:focus {
+				border-bottom-width: 2px;
+			}
+			&:focus::placeholder {
+				opacity: 0.5;
+			}
 		}
 		label {
 			position: relative;
 			width: 100%;
 			cursor: pointer;
 			opacity: 1;
-
-      .check-btn{
-        background: transparent;
-			color: #ff0000;
-			border: none;
-			cursor: pointer;
-			outline: none;
-			font-size: 1rem;
-			font-weight: bold;
-			padding: 0 0.5rem;
-      }
-			.checked{
-        text-decoration: line-through;
-      }
 		}
 	}
+}
+
+.task-list li:hover .custom-checkbox {
+	transform: scale(1.2);
+	color: #747474;
+}
+.task-list li:active .custom-checkbox {
+	transform: scale(1);
+	color: #ff652f;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+	transform: scale(1);
+	color: #ff652f;
+	opacity: 0.6;
+}
+[type="checkbox"]:checked + label .check-mark,
+[type="checkbox"]:checked + label {
+	opacity: 0.6;
+}
+
+.custom-checkbox {
+	display: inline-block;
+	width: 0.75em;
+	height: 0.75em;
+	margin-right: 0.5em;
+	cursor: pointer;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	transform: scale(1);
+	transition: transform 200ms ease-in-out;
+}
+.check-mark {
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+	opacity: 0;
+	transition: opacity 150ms ease-in-out;
+	z-index: 1;
+}
+
+.test-css__autocomplete {
+	color: blue;
+}
+
+.check-btn {
+	background: transparent;
+	color: #ff0000;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0 0.5rem;
+}
+.checked {
+	text-decoration: line-through;
 }
